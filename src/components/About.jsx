@@ -37,8 +37,7 @@ const About = () => {
     </motion.div>
     <motion.p variants={fadeIn("", "", 0.1, 1)}
     className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-      I am Jai Verma a Fullstack Developer
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta mollitia iusto assumenda possimus consectetur vero, neque quis sequi ducimus nobis quod odio consequatur deleniti maiores.
+      I am Jai Verma, a Fullstack Developer passionate about building dynamic, user-friendly, and scalable web applications. With expertise in the MERN stack (MongoDB, Express.js, React.js, Node.js), I design and develop seamless solutions from front-end interfaces to robust back-end systems. I enjoy collaborating on challenging projects, solving complex problems, and continuously learning new technologies to stay ahead in the fast-evolving tech world.
     </motion.p>
     <div className='mt-20 flex flex-wrap gap-10'>
       {services.map((service,index)=>(
