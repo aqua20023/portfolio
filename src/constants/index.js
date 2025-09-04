@@ -25,6 +25,24 @@ import {
   threejs,
 } from "../assets";
 
+import reactnative  from "../assets/tech/reactnative.png";
+import javawhite from "../assets/tech/javawhite.png"
+import mern from "../assets/company/mern.png"
+import msclogo from "../assets/company/msclogo.png"
+import gatelogo from "../assets/company/gate-logo.png"
+import LMS from "../assets/LMS.png"
+import randomgifs from "../assets/randomgifs.png"
+import codehelpblogs from "../assets/codehelpblogs.png"
+import topcourses from "../assets/topcourses.png"
+import tourist from "../assets/tourist.png"
+import javaBlack from "../assets/tech/javaBlack.png"
+
+
+
+
+
+
+
 export const navLinks = [
   {
     id: "about",
@@ -42,20 +60,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Frontend Developer",
+    icon: reactjs,
   },
   {
     title: "Backend Developer",
-    icon: backend,
+    icon: nodejs,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "React Native Developer",
+    icon: reactnative,
+  },
+  {
+    title: "DSA Java",
+    icon: javawhite,
   },
 ];
 
@@ -110,62 +128,67 @@ const technologies = [
   },
   {
     name: "docker",
-    icon: docker,
+    icon: javawhite,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Frontend Developer",
+    company_name: "Microsoft Student Ambassador's Club (Technical Co-Lead)",
+    icon: msclogo,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "October 2023 - April 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built and maintained simple web applications using HTML, CSS, JavaScript, and React.js basics.",
+      "Worked closely with teammates and designers to develop user-friendly projects.",
+      "Learned and applied responsive design principles for better usability on all devices.",
+      "Took part in code reviews, gaining feedback and improving coding practices.",
+      "Supported and guided fellow students in understanding frontend development basics.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "React Developer",
+    company_name: "Self taught Freelancer",
+    icon: reactjs,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jan 2024 - Feb 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+  "Built and maintained web applications using React.js and basic frontend technologies.",
+  "Worked with clients and teammates to create simple, user-friendly projects.",
+  "Applied responsive design principles to ensure compatibility across devices and browsers.",
+  "Learned from code reviews and feedback to improve coding skills.",
+  "Gained practical experience by completing hands-on freelance projects.",
+],
+},
+  {
+    title: "Qualified GATE 2025",
+    company_name: "GATE 2025 Examination",
+    icon: gatelogo,
+    iconBg: "#383E56",
+    date: "Feb  2025",
+    points: [
+  "Qualified GATE 2025 examination with strong problem-solving and analytical skills.",
+  "Developed a solid foundation in core Computer Science concepts including Data Structures, Algorithms, and Operating Systems.",
+  "Practiced applying theoretical knowledge to solve real-world technical problems under time constraints.",
+  "Demonstrated consistency, discipline, and effective time management during exam preparation.",
+  "Strengthened logical reasoning and technical aptitude through continuous practice and self-study.",
+],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Fullstack (MERN) Developer",
+    company_name: "Freelancer",
+    icon: mern,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jan 2025 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+  "Building and maintaining fullstack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+  "Designing and developing RESTful APIs to support dynamic and scalable applications.",
+  "Creating responsive, user-friendly interfaces with React.js and modern UI libraries.",
+  "Managing databases with MongoDB for efficient data storage and retrieval.",
+  "Collaborating with clients to understand requirements and deliver customized solutions.",
+  "Continuously learning and applying best practices in both frontend and backend development.",
+],
   },
 ];
 
@@ -200,7 +223,7 @@ const projects = [
   {
     name: "LMS Website",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A full-featured LMS website  Edemy, offering course creation, video lectures, quizzes, secure payments, and progress tracking with a responsive, user-friendly design.",
     tags: [
       {
         name: "react",
@@ -215,13 +238,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: LMS,
     source_code_link: "https://github.com/aqua20023/LMS-Edemy",
+    link: "https://github.com/aqua20023/LMS-Edemy",
   },
   {
     name: "Blogging Website",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A dynamic blogging website enabling users to create, edit, and share posts, with categories, hashtag, and a clean, responsive reading experience.",
     tags: [
       {
         name: "react",
@@ -236,13 +260,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: codehelpblogs,
     source_code_link: "https://github.com/aqua20023/Codehelp-Blogging-website-experimental",
+    link: "https://github.com/aqua20023/Codehelp-Blogging-website-experimental",
   },
   {
-    name: "Cinematic Details fillout",
+    name: "Top Courses",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A responsive top courses selling website where users can browse, purchase, and learn from curated courses with secure payments and an intuitive interface.",
     tags: [
       {
         name: "nextjs",
@@ -257,13 +282,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: topcourses,
     source_code_link: "https://github.com/aqua20023/Cinamatic-experimental",
+    link: "https://github.com/aqua20023/Cinamatic-experimental",
   },
   {
     name: "Random_Memes",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A fun random meme website that fetches and displays memes instantly, offering users endless entertainment with simple navigation and engaging, humorous content.",
     tags: [
       {
         name: "nextjs",
@@ -278,13 +304,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: randomgifs,
     source_code_link: "https://github.com/aqua20023/Random_Memes",
+    link: "https://github.com/aqua20023/Random_Memes",
   },
   {
-    name: "Password Generator",
+    name: "Trip booking ",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A responsive Indian trip booking website enabling users to explore destinations, compare packages, and securely book trips with intuitive search and filter features.",
     tags: [
       {
         name: "nextjs",
@@ -299,8 +326,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/aqua20023/Password-Generator",
+    image: tourist,
+    source_code_link: "https://github.com/aqua20023/Codehelp-Blogging-website-experimental",
+    link: "https://github.com/aqua20023/Codehelp-Blogging-website-experimental",
   },
 ];
 

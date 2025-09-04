@@ -6,6 +6,10 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { FaInstagram } from "react-icons/fa";
+
 
 
 
@@ -100,6 +104,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium' />
             
           </label>
+          <div className=' flex items-center justify-between '>
           <button 
            type='submit'
            className='bg-tertiary py-3 px-8 outline-none
@@ -107,6 +112,37 @@ const Contact = () => {
            rounded-xl'>
             {loading? "Sending...":"Send"}
           </button>
+
+<div className="flex justify-start gap-6">
+    <a 
+      href="https://github.com/aqua20023" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white text-3xl hover:text-gray-400 transition-colors"
+    >
+      <FaGithub />
+    </a>
+    <a 
+      href="https://www.linkedin.com/in/jai-verma-92b935274/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white text-3xl hover:text-blue-400 transition-colors"
+    >
+      <FaLinkedin />
+    </a>
+    <a 
+      href="https://leetcode.com/u/aqua20023/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white text-3xl hover:text-yellow-400 transition-colors"
+    >
+      <SiLeetcode />
+    </a>
+     <a href="https://www.instagram.com/titan__jai/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 text-white text-3xl transition-colors">
+      <FaInstagram />
+    </a>
+  </div>
+</div>
         </form>
       </motion.div>
 
