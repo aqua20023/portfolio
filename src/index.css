@@ -202,3 +202,383 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* Wardrobe IQ showcase */
+.wardrobe-device-float {
+  width: min(100%, 390px);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.wardrobe-phone-shell {
+  position: relative;
+  margin: 0 auto;
+  width: min(100%, 360px);
+  aspect-ratio: 9 / 19.5;
+  border-radius: 42px;
+  padding: 9px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.04) 24%, rgba(0, 0, 0, 0.8) 52%, rgba(255, 255, 255, 0.28)),
+    linear-gradient(180deg, #202228, #050506);
+  box-shadow:
+    0 46px 90px rgba(0, 0, 0, 0.5),
+    0 18px 45px rgba(215, 180, 106, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.wardrobe-phone-shell::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 37px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+}
+
+.wardrobe-phone-shell::after {
+  content: "";
+  position: absolute;
+  inset: -20px -24px;
+  z-index: -1;
+  border-radius: 58px;
+  background: radial-gradient(circle at 50% 18%, rgba(215, 180, 106, 0.2), transparent 44%);
+  filter: blur(24px);
+}
+
+.wardrobe-phone-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  padding: 4px;
+  background: linear-gradient(180deg, #090a0d, #000);
+  overflow: hidden;
+}
+
+.wardrobe-phone-screen {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 31px;
+  background:
+    radial-gradient(circle at 25% 0%, rgba(215, 180, 106, 0.08), transparent 28%),
+    #030303;
+  isolation: isolate;
+}
+
+.wardrobe-screen-reflection {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, 0.22), transparent 18%, transparent 70%, rgba(255, 255, 255, 0.06)),
+    radial-gradient(circle at 76% 8%, rgba(255, 255, 255, 0.14), transparent 14%);
+  mix-blend-mode: screen;
+  opacity: 0.38;
+}
+
+.wardrobe-side-button {
+  position: absolute;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.08));
+}
+
+.wardrobe-side-button-left {
+  left: -2px;
+  top: 23%;
+  height: 76px;
+}
+
+.wardrobe-side-button-right {
+  right: -2px;
+  top: 34%;
+  height: 112px;
+}
+
+.wardrobe-atmosphere-morning {
+  background:
+    radial-gradient(circle at 25% 0%, rgba(176, 198, 204, 0.12), transparent 35%),
+    radial-gradient(circle at 90% 22%, rgba(215, 180, 106, 0.07), transparent 26%),
+    #030303;
+}
+
+.wardrobe-atmosphere-evening {
+  background:
+    radial-gradient(circle at 20% 8%, rgba(215, 180, 106, 0.18), transparent 34%),
+    radial-gradient(circle at 86% 24%, rgba(120, 67, 45, 0.2), transparent 30%),
+    #030303;
+}
+
+.wardrobe-atmosphere-rain {
+  background:
+    linear-gradient(160deg, rgba(152, 169, 176, 0.13), transparent 35%),
+    radial-gradient(circle at 85% 18%, rgba(215, 180, 106, 0.08), transparent 26%),
+    #020303;
+}
+
+.wardrobe-atmosphere-night {
+  background:
+    radial-gradient(circle at 65% 0%, rgba(90, 105, 130, 0.12), transparent 32%),
+    linear-gradient(180deg, #050505, #010101 56%, #000);
+}
+
+.wardrobe-stage-ambient {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(48px);
+  opacity: 0.34;
+}
+
+.wardrobe-stage-ambient-one {
+  left: -12%;
+  top: 8%;
+  width: 360px;
+  height: 360px;
+  background: rgba(215, 180, 106, 0.18);
+}
+
+.wardrobe-stage-ambient-two {
+  bottom: -14%;
+  right: -12%;
+  width: 420px;
+  height: 420px;
+  background: rgba(86, 204, 242, 0.08);
+}
+
+.wardrobe-weather-dot {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: #d9b764;
+  animation: wardrobePulse 2.8s ease-in-out infinite;
+}
+
+.wardrobe-scan-stage {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(215, 180, 106, 0.22);
+  background:
+    radial-gradient(circle at 50% 56%, rgba(215, 180, 106, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(24, 26, 20, 0.95), rgba(6, 7, 3, 0.95));
+}
+
+.wardrobe-scan-corners::before,
+.wardrobe-scan-corners::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: 18;
+  border-color: #d9b764;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.wardrobe-scan-corners::before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  clip-path: polygon(0 0, 24% 0, 24% 7%, 7% 7%, 7% 24%, 0 24%, 0 0, 76% 0, 100% 0, 100% 24%, 93% 24%, 93% 7%, 76% 7%);
+}
+
+.wardrobe-scan-corners::after {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  clip-path: polygon(0 76%, 7% 76%, 7% 93%, 24% 93%, 24% 100%, 0 100%, 0 76%, 76% 93%, 93% 93%, 93% 76%, 100% 76%, 100% 100%, 76% 100%);
+}
+
+.wardrobe-scan-line {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  z-index: 19;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(215, 180, 106, 0.9), transparent);
+  box-shadow: 0 0 22px rgba(215, 180, 106, 0.45);
+}
+
+.wardrobe-garment {
+  position: absolute;
+  inset: 44px 58px 28px;
+  z-index: 8;
+  opacity: 0.98;
+}
+
+.wardrobe-garment-compact {
+  inset: 14px 70px 4px;
+  transform: scale(0.9);
+}
+
+.wardrobe-garment-body {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: 24%;
+  bottom: 0;
+  border-radius: 22px 22px 8px 8px;
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.08) 49%, transparent 52%),
+    linear-gradient(180deg, #b88f5a, #806348 58%, #4e392a);
+  box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.32);
+}
+
+.wardrobe-garment-collar {
+  position: absolute;
+  left: 27%;
+  right: 27%;
+  top: 4%;
+  height: 72px;
+  z-index: 3;
+  background:
+    linear-gradient(135deg, transparent 50%, #c59b65 51%) left / 50% 100% no-repeat,
+    linear-gradient(225deg, transparent 50%, #9b744c 51%) right / 50% 100% no-repeat;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.18));
+}
+
+.wardrobe-garment-left,
+.wardrobe-garment-right {
+  position: absolute;
+  top: 28%;
+  bottom: 3%;
+  width: 33%;
+  border-radius: 22px 12px 12px 22px;
+  background: linear-gradient(180deg, #a98256, #5d4533);
+}
+
+.wardrobe-garment-left {
+  left: 0;
+  transform: skewY(-8deg);
+}
+
+.wardrobe-garment-right {
+  right: 0;
+  transform: skewY(8deg);
+}
+
+.wardrobe-garment-placket {
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 27%;
+  bottom: 2%;
+  z-index: 4;
+  width: 2px;
+  background: rgba(32, 24, 16, 0.6);
+}
+
+.wardrobe-garment-pocket {
+  position: absolute;
+  top: 48%;
+  z-index: 5;
+  width: 34px;
+  height: 26px;
+  border: 1px solid rgba(40, 28, 16, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wardrobe-garment-pocket-left {
+  left: 18%;
+}
+
+.wardrobe-garment-pocket-right {
+  right: 18%;
+}
+
+.wardrobe-shirt {
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(30, 40, 70, 0.2) 49%, transparent 52%),
+    linear-gradient(180deg, #a9c8ef, #6e99d6);
+  clip-path: polygon(18% 0, 82% 0, 98% 30%, 82% 42%, 82% 100%, 18% 100%, 18% 42%, 2% 30%);
+}
+
+.wardrobe-mini-coat {
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.08) 49%, transparent 52%),
+    linear-gradient(180deg, #b89466, #75563c);
+  clip-path: polygon(27% 0, 73% 0, 100% 22%, 82% 100%, 18% 100%, 0 22%);
+}
+
+.wardrobe-loafer {
+  position: relative;
+  background: transparent;
+}
+
+.wardrobe-loafer::before,
+.wardrobe-loafer::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  height: 24px;
+  border-radius: 999px 999px 10px 10px;
+  background: linear-gradient(180deg, #1b1715, #050404);
+}
+
+.wardrobe-loafer::before {
+  top: 35%;
+}
+
+.wardrobe-loafer::after {
+  top: 58%;
+}
+
+@keyframes wardrobePulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.72);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .wardrobe-device-float {
+    width: min(100%, 310px);
+  }
+
+  .wardrobe-phone-shell {
+    width: min(100%, 292px);
+    border-radius: 36px;
+    padding: 7px;
+  }
+
+  .wardrobe-phone-frame {
+    border-radius: 30px;
+  }
+
+  .wardrobe-phone-screen {
+    border-radius: 26px;
+  }
+
+  .wardrobe-garment {
+    inset: 52px 48px 38px;
+  }
+
+  .wardrobe-scan-stage {
+    height: 230px;
+  }
+
+  .wardrobe-preview-detail {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wardrobe-device-float,
+  .wardrobe-weather-dot {
+    animation: none;
+  }
+
+  .wardrobe-scan-line {
+    transform: translateY(50%);
+  }
+}

@@ -14,6 +14,7 @@ const Ball = (props) => {
       scale={2.75}>
         <icosahedronGeometry args={[1,1]}/>
         <meshStandardMaterial
+        precision="lowp"
         color="#fff8eb"
         polygonOffset
         polygonOffsetFactor={-5}
@@ -33,7 +34,7 @@ const BallCanvas = ({icon})=>{
    <Canvas 
     frameloop='demand'
     
-    gl={{preserveDrawingBuffer: true}}
+   gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }} dpr={[1, 1.5]}
     >
   <Suspense fallback={<CanvasLoader/>}>
     <OrbitControls enableZoom={false} />

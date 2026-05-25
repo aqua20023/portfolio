@@ -5,7 +5,7 @@ import CanvasLoader from '../Loader';
 // import { HemisphereLight, PointLight } from 'three';  'three';
 
 const Computers = ( {isMobile} ) => {
-  const computer = useGLTF('../../public/desktop_pc/scene.gltf');
+  const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
     <mesh>
       <hemisphereLight intensity={2} groundColor="black" />
@@ -59,7 +59,7 @@ const ComputersCanvas = ()=>{
     frameloop='demand'
     shadows 
     camera={{position:[20,3,5], fov:25}}
-    gl={{preserveDrawingBuffer: true}}
+    gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }} dpr={[1, 1.5]}
     >
   <Suspense fallback={<CanvasLoader/>}>
     <OrbitControls 
